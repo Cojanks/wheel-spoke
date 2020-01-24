@@ -5,7 +5,8 @@
   "main": "test.js",
   "dependencies": {
     "commander": "^4.1.0",
-    "fs-extra": "^8.1.0"
+    "fs-extra": "^8.1.0",
+    "replace-in-file": "^5.0.2"
   },
   "devDependencies": {},
   "scripts": {
