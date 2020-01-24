@@ -1,0 +1,21 @@
+{
+  "name": "wheel-spoke",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "build": "node index.js && npm link"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cojanks/wheel-spoke.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cojanks/wheel-spoke/issues"
+  },
+  "homepage": "https://github.com/Cojanks/wheel-spoke#readme"
+}
