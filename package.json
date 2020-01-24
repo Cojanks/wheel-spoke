@@ -3,10 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "test.js",
-  "dependencies": {},
+  "dependencies": {
+    "commander": "^4.1.0",
+    "fs-extra": "^8.1.0"
+  },
   "devDependencies": {},
   "scripts": {
     "build": "node index.js && npm link"
+  },
+  "bin": {
+    "derp": "./CLI/bin/index.js"
   },
   "repository": {
     "type": "git",
