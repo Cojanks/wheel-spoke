@@ -1,14 +1,23 @@
 const fs = require("fs-extra");
 
 var boilerPath = 'CLI/boilerplate';
+var clientsDirPath = 'clients/';
 
 exports.cloneBoiler = (companyName) => {
+    var compName = spinalCase(companyName);
     console.log("./dirCloning/dirCloning.js cloneBoiler()");
-    console.log("Company name: " + spinalCase(companyName));
+    console.log("Company name: " + compName);
 
-    fs.copy(boilerPath, '../clients/' + companyName)
-        .then(() => console.log('success!'))
-        .catch(err => console.error(err))
+    fs.mkdirs(clientsDirPath + compName)
+        .then(() => {
+            fs.copy(boilerPath, clientsDirPath + compName)
+                .then(() => console.log('Copying success!'))
+                .catch(err => console.error(err))
+        })
+        .catch(err => {
+            console.error(err)
+        })
+
 
 }
 
