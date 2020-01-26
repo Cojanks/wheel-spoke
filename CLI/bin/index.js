@@ -3,16 +3,17 @@ const program = require('commander');
 
 const dirCloning = require("../lib/dirCloning");
 
-// Examples and testing --------------------------
 program
-  .command('test') // sub-command name
-  .alias('tst') // alternative sub-command
-  .description('Test command/example which takes an input and then displays it') // command description
-  // function to execute when this command is uses
+  .command('new')
+  .alias('n') 
+  .description('Creates a new client in /clients & clones an empty boilerplate client dir using the company name') 
   .action(function () {
-    let companyName = process.argv[3]; // ensure that the company name is wrapped in quotes 
-    console.log("CLI command: 'test'");
-    dirCloning.cloneBoiler(companyName);
+    let companyName = process.argv[3];
+    if(companyName == undefined) {
+      console.log("Please enter a company name. If the name is multi-word, please surround the name with \" \" ");
+    } else {
+      dirCloning.cloneBoiler(companyName);
+    }
   });
 
 
